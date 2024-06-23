@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package auth;
 
-option go_package = "kwaulere.ss0.v1;ssov1";
+option go_package = "./kwaulere.ss0.v1;ssov1";
 
 service Auth {
   rpc Register (RegisterRequest) returns (RegisterResponse);
@@ -22,7 +22,7 @@ message RegisterResponse {
 message LoginRequest {
   string email = 1; // Email of the user register.
   string password = 2; // Password of the user register.
-  int32 app_id = 3; // ID of the app to login to.
+  int64 app_id = 3; // ID of the app to login to.
 }
 
 message LoginResponse {
